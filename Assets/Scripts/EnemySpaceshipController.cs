@@ -12,6 +12,13 @@ public class EnemySpaceshipController : MonoBehaviour
     [SerializeField]
     float stoppingDistance = 10.0f;
 
+    [SerializeField]
+    int puntosDeVida = 10;
+
+    [SerializeField]
+
+    GameObject explotionPrefab;
+
     float _distanceToTarget;
 
     void Awake()
@@ -42,5 +49,35 @@ public class EnemySpaceshipController : MonoBehaviour
 
 
 
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("Laser"))
+        {
+            DestruirBala(other.gameObject);
+            puntosDeVida--;
+
+            if(puntosDeVida <= 0)
+            {
+                DestruirNave();
+            }
+        }
+        
+    }
+
+    void DestruirBala(GameObject laser)
+    {
+        Destroy(laser);
+    }
+
+    void DestruirNave()
+    {
+        if(explotionPrefab != null)
+        {
+            Instantiate(explotionPrefab, transform.position, transform.rotation);
+        }
+
+        Destroy(gameObject);
     }
 }
