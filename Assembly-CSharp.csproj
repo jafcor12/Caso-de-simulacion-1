@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{5A4A4F3D-A073-F3B6-41EC-5A9E6228FB6E}</ProjectGuid>
+    <ProjectGuid>{E40B850C-4E7B-B8D5-F552-5DDA2484E30B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -56,19 +56,22 @@
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
-    <Compile Include="Assets\Scripts\SpaceshipController.cs" />
-    <Compile Include="Assets\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
-    <Compile Include="Assets\Scripts\AsteroidSpawnerController.cs" />
-    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
-    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
-    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
-    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
-    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
     <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineVertexData.cs" />
-    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
-    <Compile Include="Assets\Scripts\FirePointController.cs" />
+    <Compile Include="Assets\Scripts\EnemySpaceshipController.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CannonBehavior.cs" />
     <Compile Include="Assets\Scripts\LasserController.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\CreateSinShapedLineStrip.cs" />
+    <Compile Include="Assets\Scripts\EnemyController.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineStripBehavior.cs" />
+    <Compile Include="Assets\Scripts\SpaceshipController.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\ShotBehavior.cs" />
+    <Compile Include="Assets\TutorialInfo\Scripts\Readme.cs" />
+    <Compile Include="Assets\Scripts\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\FirePointController.cs" />
+    <Compile Include="Assets\Scripts\AsteroidSpawnerController.cs" />
+    <Compile Include="Assets\VolumetricLines\Scripts\VolumetricLineBehavior.cs" />
+    <Compile Include="Assets\VolumetricLines\BuiltInRenderPipeline\ExampleScenes\ExampleScripts\VolumetricMultiLineBehavior.cs" />
+    <Compile Include="Assets\Asteroids Pack\Assets\Scripts\RandomRotator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\VolumetricLines\BuiltInRenderPipeline\Shaders\_LineStripShader.cginc" />
