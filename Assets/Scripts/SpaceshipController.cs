@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SpaceshipController : MonoBehaviour
 {
@@ -40,6 +41,8 @@ public class SpaceshipController : MonoBehaviour
     float rollAcceleration = 3.5F;
 
     Rigidbody _rb;
+
+    public bool gameOver;
 
     float _activeForwardSpeed;
     float _activeStrafeSpeed;
@@ -107,4 +110,16 @@ public class SpaceshipController : MonoBehaviour
         float currentHoverSpeed = Input.GetAxisRaw("Hover") * hoverSpeed;
         _activeHoverSpeed = Mathf.Lerp(_activeHoverSpeed, currentHoverSpeed, hoverAcceleration * Time.deltaTime);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.CompareTag("Enemy")){
+            Destroy(gameObject);
+            Debug.Log("Game Over");
+            gameOver = true;
+            SceneManager.LoadScene("GameOverScreen");
+        } 
+
+    }
+
 }

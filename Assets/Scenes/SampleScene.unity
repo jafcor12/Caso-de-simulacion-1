@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.029492162, g: 0.04275387, b: 0.03210018, a: 1}
+  m_IndirectSpecularColor: {r: 0.029476285, g: 0.04278432, b: 0.032096837, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -564,9 +564,10 @@ GameObject:
   - component: {fileID: 545430956621099739}
   - component: {fileID: 5917304253614767631}
   - component: {fileID: 7332147067430950104}
+  - component: {fileID: 7332147067430950105}
   m_Layer: 0
   m_Name: Spaceship
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -688,6 +689,7 @@ MonoBehaviour:
   strafeAcceleration: 2
   hoverAcceleration: 2
   rollAcceleration: 1.5
+  gameOver: 0
 --- !u!1 &6594317022261012909
 GameObject:
   m_ObjectHideFlags: 0
@@ -792,6 +794,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &7332147067430950105
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3646211549520703554}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8580103759459208725
 GameObject:
   m_ObjectHideFlags: 0
