@@ -22,9 +22,6 @@ public class EnemyController : MonoBehaviour
     [SerializeField]
     float speed = 5.0f;                         // velocidad a la que sigue la nave
 
-    [SerializeField]
-    float stoppingDistance = 10.0f;
-
     List<GameObject> spawningObjects = new List<GameObject>();
 
     Vector3 spawningPoint;
@@ -52,21 +49,9 @@ public class EnemyController : MonoBehaviour
 
         Vector3 direction = target.position - transform.position;                   // calcula diferencia entre los objetos
         float distance = direction.magnitude;                                       // determina la distancia entre el target y el objecto
-
-
-        if (distance > stoppingDistance)                                            // mientras este mas largo que el stopping distance va a moverse al target
-        {
-            transform.LookAt(target.position);                                      // gira al target
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);                   // Se mueve hacia el target
-        }
-
-
-        //Vector3 targetPosition = new Vector3(2.0f, 0.0f, 0.0f); // Replace with your target position.
-        //transform.position = Vector3.Lerp(transform.position, targetPosition, lerpSpeed * Time.deltaTime);
-
-
-
-
+        
+        transform.LookAt(target.position);                                          // gira al target
+        transform.Translate(Vector3.forward * speed * Time.deltaTime);              // Se mueve hacia el target
     }
 
     void GetSpawningPoint()
