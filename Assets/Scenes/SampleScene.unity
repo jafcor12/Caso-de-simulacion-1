@@ -447,8 +447,8 @@ MonoBehaviour:
   enemyObjectPrefab: {fileID: 1402552833321079642, guid: ce42902fd8e20d84099de6a8f3f3d919,
     type: 3}
   enemyAmount: 3
-  enemyRange: 300
-  spawningSafeRange: 200
+  enemyRange: 400
+  spawningSafeRange: 300
 --- !u!1 &2058104380
 GameObject:
   m_ObjectHideFlags: 0
